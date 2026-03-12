@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>JSON</title>
+    <script>
+        var JSON = [{"name":"HP","age":19},{"name":"AB","age":22},{"name":"MS","age":20}];
+        
+        // Bubble sort by age
+        //for (var i = 0; i < JSON.length - 1; i++) {
+        //    for (var j = 0; j < JSON.length - i - 1; j++) {
+        //        if(JSON[j].age > JSON[j+1].age) {
+        //            var temp = JSON[j];
+        //            JSON[j] = JSON[j+1];
+        //            JSON[j+1] = temp;
+        //        }
+        //    }
+        //}
+        console.log(JSON.sort((a, b) => a.age - b.age));
+    </script>
+</head>

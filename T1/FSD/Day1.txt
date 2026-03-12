@@ -1,0 +1,12 @@
+MERN - MongoDB , Express , React.js , Node.js
+
+    T1 - JSON(JavaScript Object Notation) + Node
+    T2 - Express
+    T3 - React
+    T4 - MongoDB
+
+
+CYCLE OF FSD WEBAPP
+  SERVER --> String JSON --> parse Object --> stringify
+    |                                             |
+    ---------------------------------  Browser <----

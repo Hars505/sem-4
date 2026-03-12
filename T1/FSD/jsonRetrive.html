@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <title>JSON</title>
+    <script>
+      // Program - 1
+      var jsonData = {
+        name: "kahan",
+        age: 25,
+        isPass: true,
+        address: { city: "Abad", zip: 380015 },
+        subject: ["Math", "Sc"],
+        year: null,
+      };
+      console.log(jsonData.subject.slice(0, 1));
+      // Program - 2
+      const User = {
+        name: ["ABC", "DEF", "GHI"],
+        age: 28,
+        course: ["FSD-2", "DE", "FSD-1"],
+        address: ["T1", "T2", { T3: "Give Again" }],
+      };
+      console.log(User.address[2].T3);
+      // Program - 3
+      const JSON = {
+        DataStructure: [
+          { name: "tree", course: "intro", content: ["I", "B", "C"] },
+          { name: "tree1", course: "intro1", content: ["I", "B", "C", "D"] },
+        ],
+        XYZ: { Name: "Graphics", Topic: ["BFS", "CDF", "Sorting"] },
+      };
+      console.log(JSON.DataStructure[1].name);
+      console.log(JSON.DataStructure[0].name);
+      console.log(JSON.XYZ.Name);
+      console.log(JSON.XYZ.Topic);
+      console.log(JSON.XYZ.Topic[0]);
+      console.log(JSON.DataStructure.course);
+      console.log(JSON.DataStructure[0].content[1]);
+
+      // Program - 4
+      const Sentence = {
+        A: "LJU",
+        B: ["CSE", "IT", "CE"],
+        C: [{ D: "Hi", E: ["are", 4, { F: ["Semester", "We"] }] }],
+        G: { H: "Student", I: ["of", "!"] },
+        J: [{ K: "Python", L: "Branch" }, "FSD-2"],
+      };
+      console.log(
+        Sentence.C[0].D + Sentence.G.I[1],
+        Sentence.C[0].E[2].F[1],
+        Sentence.C[0].E[0],
+        Sentence.G.H,
+        Sentence.G.I[0],
+        Sentence.C[0].E[2].F[0],
+        Sentence.C[0].E[1],
+        Sentence.G.I[0],
+        Sentence.B[0],
+        Sentence.J[0].L,
+      );
+    </script>
+  </head>
+</html>
