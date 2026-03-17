@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>read file</title>
+    <script>
+        var fs = require("fs");
+        var data = fs.readFileSync("data.txt");
+        console.log(data.toString());
+        // or
+        const data = fd.readFileSync("data.txt","utf-8")
+        console.log(data) // use this instead of above to avoid toString() method
+
+        // for Append data to file
+        fs.appendFileSync("data.txt", "Hello World Add new Line here");
+
+        // for Renaming File
+        fs.renameSync("data.txt","new.txt");
+
+        // for Deleting File
+        fs.unlinkSync("new.txt");
+
+        // for Deleting Folder/Directory
+        fs.rmdirSync("myFolder");
+        
+        // for Copying File
+        fs.copyFileSync("data.txt","Copydata.txt");
+
+    </script>
+  </head>
+  <body style="background-color: dodgerblue"></body>
+</html>
