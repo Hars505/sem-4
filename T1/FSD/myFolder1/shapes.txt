@@ -1,0 +1,4 @@
+[{"name":"Circle","diameter":8},{"name":"square","length":10},{"name":"triangle","height":6,"base":8}]
+circle = 25.12,
+square = 40,
+triangle = 24 .

@@ -9,4 +9,7 @@ MERN - MongoDB , Express , React.js , Node.js
 CYCLE OF FSD WEBAPP
   SERVER --> String JSON --> parse Object --> stringify
     |                                             |
-    ---------------------------------  Browser <----
+    ---------------------------------  Browser <---
+
+
+Async Method for file System Module :
