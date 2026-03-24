@@ -1,6 +1,53 @@
-"HELLOVNNCJ DJ m sj fv sj v AJc d SOUvnk Sz4AdvnoSd kndkvv SKLdf v"vlsmkdv c s
-dv dvnsK dvl zldm z
-<html>
-  M<Vnad
-  > </Vnad>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+    <title>JSON</title>
+    <script>
+      // Program-1
+      var JSON = {
+        div1: { name: ["AAP", "NFK"] },
+        div2: { name: ["LMP", "HUP"] },
+      };
+      console.log(JSON.div1.name);
+      console.log(JSON.div2.name);
+      var dw = JSON.div1.name.concat(JSON.div2.name);
+      console.log(dw);
+      console.log(dw.sort());
+
+      // Program - 2
+      function showDate(self) {
+        var JSON = { Name: "HP", Age: 19, Date: "2007-01-01" };
+        var D = new Date(JSON.Date);
+        document.write(D);
+        console.log(D);
+      }
+      // program - 4
+      const sub = {
+        "FSD":[
+            {"Topic":"HTML","Course":"Beginner","Content":["Toys","Tables","Form"]},
+            {"Topic":"CSS","Course":"Advance","Content":["Toys","Tables","Node"]}
+        ]
+      }
+      for(x in sub.FSD)
+      {
+        for(y in sub.FSD[x].Content)
+        {
+          document.write(sub.FSD[x][y]="<br>")
+        }
+      }
+      for(x1 of sub.FSD)
+      {
+        document.write(x1.Topic+"<br>")
+        document.write(x1.Content+"<br>")
+        document.write(x1.Course+"<br>")
+      }
+      // Program - 3
+    </script>
+  </head>
+  <body style="background-color: lightskyblue">
+    <h1>Date Showing Platform</h1>
+    <button onclick="showDate(self)">Show Date</button>
+  </body>
 </html>
