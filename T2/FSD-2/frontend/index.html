@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A basic HTML setup with global CSS" />
+    <title>My Web Project</title>
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header
+        style="margin-top: var(--spacing-xl); margin-bottom: var(--spacing-lg)"
+      >
+        <h1>Welcome to Your Project</h1>
+        <p>This HTML file is successfully linked to your CSS baseline.</p>
+      </header>
+
+      <section>
+        <h2>Typography & Colors</h2>
+        <p>
+          Notice how the fonts, margins, and text colors are automatically
+          applied using the CSS variables defined in the
+          <code>:root</code> selector.
+        </p>
+
+        <p>
+          You can also see the <a href="#">link hover effects</a> in action.
+        </p>
+      </section>
+
+      <section
+        class="flex-center"
+        style="
+          height: 300px;
+          background-color: var(--surface-color);
+          border: 1px solid var(--border-color);
+          border-radius: 8px;
+          margin-top: var(--spacing-lg);
+        "
+      >
+        <img src="index.png" alt="Placeholder Image" />
+      </section>
+      <section
+        class="flex-center"
+        style="
+          height: 100px;
+          background-color: var(--surface-color);
+          border: 1px solid var(--border-color);
+          border-radius: 8px;
+          margin-top: var(--spacing-lg);
+        "
+      >
+        <form action="/process.get" method="get">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" /><br /><br />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" /><br />
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

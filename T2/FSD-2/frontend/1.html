@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A basic HTML setup with global CSS" />
+    <title>My Web Project</title>
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main class="container">
+      <form action="/calc" method="get">
+        <label for="number">Number 1:</label>
+        <input type="number" id="number1" name="number1" /><br />
+        <label for="number">Number 2:</label>
+        <input type="number" id="number2" name="number2" /><br />
+        <select name="formula" id="formula">
+          <option value="add">ADD (+)</option>
+          <option value="sub">SUB (-)</option>
+          <option value="mul">MUL (x)</option>
+          <option value="div">DIV (/)</option>
+        </select>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
