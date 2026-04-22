@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A basic HTML setup with global CSS" />
+    <title>My Project</title>
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section
+        class="flex-center"
+        style="
+          height: 3 00px;
+          background-color: var(--surface-color);
+          border: 1px solid var(--border-color);
+          border-radius: 8px;
+          margin-top: var(--spacing-lg);
+        "
+      >
+        <form method="POST" action="/fetchdata">
+          Name :
+          <input type="text" name="fname" placeholder="First Name" /><br />
+          Password :
+          <input type="test" name="email" placeholder="E-mail" /><br />
+          Subscribe <input type="checkbox" name="subscribe" /><br />
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
