@@ -3,62 +3,124 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A basic HTML setup with global CSS" />
     <title>My Web Project</title>
 
-    <link rel="stylesheet" href="index.css" />
+    <style>
+      /* 1. Define the CSS Variables */
+      :root {
+        --surface-color: #f8fafc;
+        --border-color: #cbd5e1;
+        --spacing-lg: 2rem;
+        --primary-color: #2563eb;
+        --primary-hover: #1d4ed8;
+        --text-color: #0f172a;
+        --bg-color: #e2e8f0;
+      }
+
+      /* 2. Basic Reset for consistent cross-browser rendering */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.5;
+        padding: 2rem;
+      }
+
+      /* 3. Container Layout */
+      .container {
+        max-width: 500px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow:
+          0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+
+      /* 4. Form Styling */
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      input[type="text"] {
+        padding: 0.75rem 1rem;
+        border: 1px solid var(--border-color);
+        border-radius: 6px;
+        font-size: 1rem;
+        transition:
+          border-color 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      input[type="text"]:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+      }
+
+      button[type="submit"] {
+        padding: 0.75rem;
+        background-color: var(--primary-color);
+        color: #ffffff;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+
+      button[type="submit"]:hover {
+        background-color: var(--primary-hover);
+      }
+
+      /* 5. Utility & Section Classes */
+      .flex-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .image-section {
+        height: 300px;
+        background-color: var(--surface-color);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        margin-top: var(--spacing-lg);
+      }
+
+      /* 6. Image constraints */
+      .flex-center img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        padding: 1rem;
+      }
+    </style>
   </head>
   <body>
     <main class="container">
-      <header
-        style="margin-top: var(--spacing-xl); margin-bottom: var(--spacing-lg)"
-      >
-        <h1>Welcome to Your Project</h1>
-        <p>This HTML file is successfully linked to your CSS baseline.</p>
-      </header>
+      <form method="POST" action="/process">
+        <input type="text" name="fname" placeholder="First Name" />
+        <input type="text" name="email" placeholder="E-mail" />
+        <button type="submit">Submit</button>
+      </form>
 
-      <section>
-        <h2>Typography & Colors</h2>
-        <p>
-          Notice how the fonts, margins, and text colors are automatically
-          applied using the CSS variables defined in the
-          <code>:root</code> selector.
-        </p>
-
-        <p>
-          You can also see the <a href="#">link hover effects</a> in action.
-        </p>
-      </section>
-
-      <section
-        class="flex-center"
-        style="
-          height: 300px;
-          background-color: var(--surface-color);
-          border: 1px solid var(--border-color);
-          border-radius: 8px;
-          margin-top: var(--spacing-lg);
-        "
-      >
-        <img src="index.png" alt="Placeholder Image" />
-      </section>
-      <section
-        class="flex-center"
-        style="
-          height: 100px;
-          background-color: var(--surface-color);
-          border: 1px solid var(--border-color);
-          border-radius: 8px;
-          margin-top: var(--spacing-lg);
-        "
-      >
-        <form action="/process.get" method="get">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" /><br /><br />
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" /><br />
-          <button type="submit">Submit</button>
-        </form>
+      <section class="flex-center image-section">
+        <img src="../PNG/index.png" alt="Placeholder Image" />
       </section>
     </main>
   </body>
