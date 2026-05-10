@@ -5,7 +5,6 @@ app.use(cp());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("../CSS"));
 app.use(express.static("../frontend", { index: "2.html" }));
-
 app.get("/", (req, res) => {
   const html = `<form method="POST" action="/next">
     <input type="text" name="fname" placeholder="First Name" required>
