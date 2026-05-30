@@ -5,6 +5,11 @@ import File1 from "./File1";
 import Lmn from "./Lmn";
 import Form from "./Form";
 import Parent from "./Parent";
+import Parent2 from "./Parent2";
+import Route from "./Routing";
+import { StaticRouter } from "react-router";
+import Click from "./Click";
+
 /**
  * @param {string} _url
  * @param {import('react-dom/server').RenderToPipeableStreamOptions} [options]
@@ -12,7 +17,9 @@ import Parent from "./Parent";
 export function render(_url, options) {
   return renderToPipeableStream(
     <StrictMode>
-      <Parent />
+      <StaticRouter location={_url}>
+        <Click />
+      </StaticRouter>
     </StrictMode>,
     options,
   );
